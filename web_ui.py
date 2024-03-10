@@ -18,7 +18,7 @@ def web_ui():
         password_hash = hash_string(password)
 
         #connect to database
-        conn = mysql.connector.connect(host='localhost',user='root',passward='amiParbo54#',database="users")
+        conn = mysql.connector.connect(host='localhost', user='root', password='amiParbo54#', database="users")
         cursor = conn.cursor()
 
         #check if the email and pass exist in the database
@@ -28,7 +28,7 @@ def web_ui():
         if result:
             return render_template('index.html',message='Credentials Matched!')
         else:
-            return render_template('index_html',message='Credentials NOT exist!!')
+            return render_template('index.html',message='Credentials NOT exist!!')
         
     return render_template('index.html',message="")
 
