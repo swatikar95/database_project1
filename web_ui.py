@@ -19,7 +19,7 @@ def web_ui():
         password_hash = hash_string(password)
 
         #connect to database
-        conn = mysql.connector.connect(host='localhost', user='root', password='amiParbo54#', database="users")
+        conn = mysql.connector.connect(host='localhost', user='root', password='****', database="users")
         cursor = conn.cursor()
 
         #start timer
